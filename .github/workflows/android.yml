@@ -4,16 +4,6 @@ on:
  push:
   branches:
    - master
-components:
-   - build-tools-29.0.2
-
-    # The SDK version used to compile your project
-   - android-29
-
-    # Additional components
-   - extra-google-google_play_services
-   - extra-google-m2repository
-   - extra-android-m2repository
 
 jobs:
   build:
@@ -26,6 +16,12 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
+    steps:
+    - uses: actions/checkout@v1
+    - name: set up Android 29
+      uses: actions/setup-android@v1
+      with:
+        android-version: 29.0.2
     
     - name: Access Permission
       run: chmod +x ./gradlew
