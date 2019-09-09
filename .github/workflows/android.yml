@@ -19,5 +19,8 @@ jobs:
     
     - name: Access Permission
       run: chmod +x ./gradlew
+    - name: Creating repository.cfg
+      run: |
+        touch ~/.android/repositories.cf
     - name: Build with Gradle
       run: ./gradlew build
