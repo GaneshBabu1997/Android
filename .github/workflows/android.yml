@@ -19,7 +19,7 @@ jobs:
         
     - uses: actions/checkout@master
     - name: set up Android 29
-      uses: actions/setup-android@v1
+      uses: actions/setup-android@master
       with:
         android-version: 29.0.2
     
