@@ -16,7 +16,7 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    steps:
+        
     - uses: actions/checkout@v1
     - name: set up Android 29
       uses: actions/setup-android@v1
