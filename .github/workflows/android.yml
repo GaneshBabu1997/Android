@@ -16,12 +16,6 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-        
-    - uses: actions/checkout@master
-    - name: set up Android 29
-      uses: actions/setup-android@master
-      with:
-        android-version: 29.0.2
     
     - name: Access Permission
       run: chmod +x ./gradlew
